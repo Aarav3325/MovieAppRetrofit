@@ -27,7 +27,7 @@ public class MovieRepository {
     public MutableLiveData<List<Movie>> getMutableLiveData() {
         MovieApiService movieApiService = RetrofitInstance.getService();
 
-        Call<Result> call = movieApiService.getPopularMovies(application.getApplicationContext().getString(R.string.api_key));
+        Call<Result> call = movieApiService.getPopularMovies(API_KEY); //mention your API_KEY
 
         call.enqueue(new Callback<Result>() {
             @Override
